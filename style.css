@@ -335,6 +335,7 @@ a.contact-value:hover{ border-bottom-color:var(--fg); }
   z-index:60;
   pointer-events:none;
   overflow:hidden;
+  perspective:900px;
 }
 
 .grid-half{
@@ -342,28 +343,51 @@ a.contact-value:hover{ border-bottom-color:var(--fg); }
   top:0;
   bottom:0;
   width:50%;
+  overflow:hidden;             /* clips the tilted grid-plane to this half */
+  transform:scaleX(0) translateX(0);
+  will-change:transform;
+}
+
+/* the actual grid texture lives on a child plane that's tilted in 3D —
+   this is what gives the lines a converging, perspective-warped feel
+   instead of a flat, uniform checkerboard */
+.grid-plane{
+  position:absolute;
+  top:-30%;
+  left:-60%;
+  width:220%;
+  height:160%;
   background-image:
     linear-gradient(to right, rgba(255,255,255,0.9) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255,255,255,0.9) 1px, transparent 1px);
-  background-size: 46px 46px;
-  transform:scaleX(0) translateX(0);
-  will-change:transform;
+  background-size: 64px 64px;
+  transform-style:preserve-3d;
 }
 
 .grid-left{
   left:0;
   transform-origin:100% 50%;
-  background-position:right top;
   mask-image:linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
   -webkit-mask-image:linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+
+.grid-left .grid-plane{
+  right:-60%;
+  left:auto;
+  transform-origin:100% 50%;
+  transform:rotateY(-58deg) rotateX(6deg);
 }
 
 .grid-right{
   right:0;
   transform-origin:0% 50%;
-  background-position:left top;
   mask-image:linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
   -webkit-mask-image:linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+
+.grid-right .grid-plane{
+  transform-origin:0% 50%;
+  transform:rotateY(58deg) rotateX(6deg);
 }
 
 .construct-bloom{
