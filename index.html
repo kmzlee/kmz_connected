@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KMZ — CONNECT PORTAL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Neue+Montreal:wght@400;500&family=Space+Grotesk:wght@300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CONSTRUCT TRANSITION OVERLAY -->
+<div class="construct-transition" aria-hidden="true">
+  <div class="grid-half grid-left"></div>
+  <div class="grid-half grid-right"></div>
+  <div class="construct-bloom"></div>
+</div>
+
+<header class="site-header">
+  <a href="#top" class="header-mark">KMZ</a>
+  <nav class="site-nav">
+    <a href="#about" data-index="1">ABOUT</a>
+    <a href="#works" data-index="2">MUSIC / WORKS</a>
+    <a href="#contact" data-index="3">CONTACT</a>
+  </nav>
+</header>
+
+<div class="pages" id="pages">
+
+  <!-- 0 · HERO -->
+  <section id="top" class="page hero-page is-active" data-index="0">
+    <div class="page-inner hero">
+      <img class="hero-logo" src="assets/kmz-logo.jpg" alt="KMZ logo">
+      <h1 class="hero-title">CONNECT<br>PORTAL</h1>
+      <p class="hero-sub">MUSIC UNIT — SEOUL / TOKYO</p>
+      <a href="#about" class="scroll-cue" data-index="1" aria-label="Scroll down">↓</a>
+    </div>
+  </section>
+
+  <!-- 1 · ABOUT -->
+  <section id="about" class="page" data-index="1">
+    <div class="page-inner section about">
+      <span class="section-index">01</span>
+      <h2 class="section-title">ABOUT</h2>
+
+      <p class="about-lede">
+        KMZ는 작곡·프로듀싱·연주·보컬이 한 팀 안에서 맞물려 움직이는
+        3인조 뮤직 유닛입니다. 각자의 파트에서 독립적으로 작업하는 동시에,
+        하나의 사운드로 수렴하는 것을 지향합니다.
+      </p>
+
+      <ul class="member-list">
+        <li class="member">
+          <span class="member-role">COMPOSING / PRODUCTION / DIRECTOR</span>
+          <span class="member-name">David <em>(Lee Jungho)</em></span>
+        </li>
+        <li class="member">
+          <span class="member-role">VOCAL</span>
+          <span class="member-name">Sally</span>
+        </li>
+        <li class="member">
+          <span class="member-role">GUITAR / SESSION</span>
+          <span class="member-name placeholder">[ MEMBER NAME 입력 필요 ]</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 · MUSIC / WORKS -->
+  <section id="works" class="page" data-index="2">
+    <div class="page-inner section works">
+      <span class="section-index">02</span>
+      <h2 class="section-title">MUSIC / WORKS</h2>
+
+      <ul class="work-list">
+        <li class="work-item">
+          <span class="work-meta">2026</span>
+          <span class="work-title placeholder">[ 트랙 / 프로젝트명 입력 ]</span>
+          <span class="work-role">Composing · Production</span>
+        </li>
+        <li class="work-item">
+          <span class="work-meta">2026</span>
+          <span class="work-title placeholder">[ 트랙 / 프로젝트명 입력 ]</span>
+          <span class="work-role">Vocal · Sally</span>
+        </li>
+        <li class="work-item">
+          <span class="work-meta">—</span>
+          <span class="work-title placeholder">[ 추가 작업물 입력 ]</span>
+          <span class="work-role">—</span>
+        </li>
+      </ul>
+
+      <p class="works-note">* 발매 트랙 / 링크는 추후 업데이트 예정입니다.</p>
+    </div>
+  </section>
+
+  <!-- 3 · CONTACT -->
+  <section id="contact" class="page" data-index="3">
+    <div class="page-inner section contact">
+      <span class="section-index">03</span>
+      <h2 class="section-title">CONTACT</h2>
+
+      <div class="contact-grid">
+        <div class="contact-block">
+          <span class="contact-label">BUSINESS / BOOKING</span>
+          <span class="contact-value placeholder">[ 이메일 주소 입력 ]</span>
+        </div>
+        <div class="contact-block">
+          <span class="contact-label">INSTAGRAM</span>
+          <a class="contact-value" href="#">@hukku_bukku</a>
+        </div>
+      </div>
+
+      <div class="site-footer">
+        <div class="footer-marquee" aria-hidden="true">
+          <span>KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;KMZ&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <p class="footer-copy">© 2026 KMZ. ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
